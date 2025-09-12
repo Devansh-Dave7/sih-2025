@@ -25,7 +25,7 @@ const AdminSubmissionView: React.FC = () => {
   return (
     <div>
       <PageMeta
-        title="Admin Form Submissions | TailAdmin"
+        title="Admin Form Submissions | SPREADVERSE"
         description="View all submissions for admin-created forms"
       />
       <PageBreadcrumb pageTitle="Admin Form Submissions" />

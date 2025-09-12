@@ -25,7 +25,7 @@ const HostelSubmissionView: React.FC = () => {
   return (
     <div>
       <PageMeta
-        title="Hostel Form Submissions | TailAdmin"
+        title="Hostel Form Submissions | SPREADVERSE"
         description="View all submissions for hostel-created forms"
       />
       <PageBreadcrumb pageTitle="Hostel Form Submissions" />

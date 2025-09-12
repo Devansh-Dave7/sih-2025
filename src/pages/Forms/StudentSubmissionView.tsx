@@ -30,7 +30,7 @@ const StudentSubmissionView: React.FC = () => {
   return (
     <div>
       <PageMeta
-        title="My Form Submissions | TailAdmin"
+        title="My Form Submissions | SPREADVERSE"
         description="View all your form submissions"
       />
       <PageBreadcrumb pageTitle="My Submissions" />

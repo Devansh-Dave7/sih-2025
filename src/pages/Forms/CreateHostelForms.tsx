@@ -81,7 +81,7 @@ const CreateHostelForms: React.FC = () => {
   return (
     <div>
       <PageMeta
-        title="Create Hostel Forms | TailAdmin"
+        title="Create Hostel Forms | SPREADVERSE"
         description="Create hostel-related forms for students"
       />
       <PageBreadcrumb pageTitle="Create Hostel Forms" />

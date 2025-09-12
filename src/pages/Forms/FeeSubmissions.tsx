@@ -3,7 +3,7 @@ import PageBreadcrumb from '../../components/common/PageBreadCrumb';
 import PageMeta from '../../components/common/PageMeta';
 import { useFeeForms } from '../../context/FeeFormsContext';
 import { useAuth } from '../../context/AuthContext';
-import { FeeSubmissionForm, FeeFormSubmission, FeeFormField } from '../../types/auth';
+import { FeeSubmissionForm, FeeFormField } from '../../types/auth';
 
 const FeeSubmissions: React.FC = () => {
   const { user } = useAuth();
@@ -160,7 +160,7 @@ const FeeSubmissions: React.FC = () => {
   return (
     <div>
       <PageMeta
-        title="Fee Submissions | TailAdmin"
+        title="Fee Submissions | SPREADVERSE"
         description="View and submit fee forms"
       />
       <PageBreadcrumb pageTitle="Fee Submissions" />

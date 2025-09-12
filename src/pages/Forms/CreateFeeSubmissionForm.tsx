@@ -81,7 +81,7 @@ const CreateFeeSubmissionForm: React.FC = () => {
   return (
     <div>
       <PageMeta
-        title="Create Fee Submission Form | TailAdmin"
+        title="Create Fee Submission Form | SPREADVERSE"
         description="Create fee submission forms for students"
       />
       <PageBreadcrumb pageTitle="Create Fee Submission Form" />

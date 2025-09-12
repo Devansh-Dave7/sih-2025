@@ -79,7 +79,7 @@ const AvailableForms: React.FC = () => {
   return (
     <div>
       <PageMeta
-        title="Available Forms | TailAdmin"
+        title="Available Forms | SPREADVERSE"
         description="View and submit available forms"
       />
       <PageBreadcrumb pageTitle="Available Forms" />

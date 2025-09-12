@@ -81,7 +81,7 @@ const CreateAdminForms: React.FC = () => {
   return (
     <div>
       <PageMeta
-        title="Create Administrative Forms | TailAdmin"
+        title="Create Administrative Forms | SPREADVERSE"
         description="Create administrative forms for students and staff"
       />
       <PageBreadcrumb pageTitle="Create Administrative Forms" />

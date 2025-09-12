@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
       <PageMeta
-        title="Role-Based Dashboard | TailAdmin - React.js Admin Dashboard Template"
-        description="This is Role-Based Dashboard page for TailAdmin - React.js Tailwind CSS Admin Dashboard Template"
+        title="Role-Based Dashboard | SPREADVERSE - React.js Admin Dashboard Template"
+        description="This is Role-Based Dashboard page for SPREADVERSE - React.js Tailwind CSS Admin Dashboard Template"
       />
       <RoleBasedDashboard>
         <div className="grid grid-cols-12 gap-4 md:gap-6">
