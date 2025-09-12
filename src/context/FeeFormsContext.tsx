@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { FeeSubmissionForm, FeeFormSubmission, FeeFormField, User } from '../types/auth';
+import { FeeSubmissionForm, FeeFormSubmission } from '../types/auth';
 import { useAuth } from './AuthContext';
 
 interface FeeFormsContextType {
