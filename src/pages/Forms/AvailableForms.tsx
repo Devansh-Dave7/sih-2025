@@ -7,16 +7,15 @@ import { FeeSubmissionForm } from '../../types/auth';
 
 const AvailableForms: React.FC = () => {
   const { user } = useAuth();
-  const { forms, submitForm } = useFeeForms();
+  const { forms, submissions, submitForm } = useFeeForms();
   const [selectedForm, setSelectedForm] = useState<FeeSubmissionForm | null>(null);
   const [formData, setFormData] = useState<Record<string, any>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Get available forms for students (exclude submitted ones)
-  const userSubmissions = JSON.parse(localStorage.getItem('feeSubmissions') || '[]');
-  const submittedFormIds = userSubmissions
-    .filter((sub: any) => sub.submittedBy === user?.id)
-    .map((sub: any) => sub.formId);
+  const submittedFormIds = submissions
+    .filter(submission => submission.submittedBy === user?.id)
+    .map(submission => submission.formId);
 
   const availableForms = forms.filter(form =>
     form.isActive &&
@@ -64,7 +63,6 @@ const AvailableForms: React.FC = () => {
         alert('Form submitted successfully!');
         setSelectedForm(null);
         setFormData({});
-        window.location.reload(); // Refresh to update available forms
       } else {
         alert('Failed to submit form. Please try again.');
       }
