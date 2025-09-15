@@ -30,6 +30,12 @@ import { AuthProvider } from "./context/AuthContext";
 import { EventsProvider } from "./context/EventsContext";
 import { FeeFormsProvider } from "./context/FeeFormsContext";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
+import StudentGrades from "./pages/Student/StudentGrades";
+import AdminSettings from "./pages/Admin/AdminSettings";
+// import AdminStudentGradesEditor from "./pages/Admin/AdminStudentGradesEditor";
+import ClerkRecords from "./pages/Clerk/ClerkRecords";
+import HostelManagement from "./pages/Hostel/HostelManagement";
+import AdminStudentGradesEditor from "./pages/Admin/AdminStudentGradesEditor";
 
 export default function App() {
   return (
@@ -47,6 +53,13 @@ export default function App() {
           {/* Protected Dashboard Layout */}
           <Route element={<ProtectedRoute><AppLayout /></ProtectedRoute>}>
             <Route path="/dashboard" element={<Home />} />
+
+            {/* Role-based pages */}
+            <Route path="/student/grades" element={<StudentGrades />} />
+            <Route path="/admin/settings" element={<AdminSettings />} />
+            <Route path="/admin/student-grades" element={<AdminStudentGradesEditor />} />
+            <Route path="/clerk/records" element={<ClerkRecords />} />
+            <Route path="/hostel/rooms" element={<HostelManagement />} />
 
             {/* Others Page */}
             <Route path="/profile" element={<UserProfiles />} />

@@ -1,5 +1,6 @@
 import { useAuth } from "../context/AuthContext";
 import { UserRole } from "../types/auth";
+import { useNavigate } from "react-router";
 
 const getRoleBasedWidgetContent = (role: UserRole) => {
   switch (role) {
@@ -39,6 +40,28 @@ const getRoleBasedWidgetContent = (role: UserRole) => {
 export default function SidebarWidget() {
   const { user } = useAuth();
   const content = user ? getRoleBasedWidgetContent(user.role) : getRoleBasedWidgetContent('student');
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    const role = user?.role ?? 'student';
+    switch (role) {
+      case 'student':
+        navigate('/student/grades');
+        break;
+      case 'admin':
+        navigate('/admin/settings');
+        break;
+      case 'clerk':
+        navigate('/clerk/records');
+        break;
+      case 'hostel-warden':
+        navigate('/hostel/rooms');
+        break;
+      default:
+        navigate('/dashboard');
+        break;
+    }
+  };
   
   return (
     <div
@@ -53,6 +76,7 @@ export default function SidebarWidget() {
       </p>
       <button
         className="flex items-center justify-center p-3 font-medium text-white rounded-lg bg-brand-500 text-theme-sm hover:bg-brand-600 w-full"
+        onClick={handleClick}
       >
         {content.buttonText}
       </button>
